@@ -8,6 +8,7 @@ body{
 }
 main{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -126,3 +127,34 @@ hr{
         Media query
 --------------------------- */
 
+/* -------Mobile Devices------- */
+
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+}
+
+/* ----------Tablet Devices------------- */
+
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+}
